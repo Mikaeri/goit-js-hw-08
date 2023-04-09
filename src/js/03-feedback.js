@@ -43,7 +43,7 @@ function populateForm() {
   }
 
   if (savedForm.message) {
-    textareaEl.value = savedForm.message;
+    textAreaEl.value = savedForm.message;
     formData.message = savedForm.message;
   }
 }
