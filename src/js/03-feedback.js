@@ -37,13 +37,10 @@ function onFormInput(event) {
 function populateForm() {
   const savedForm = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
 
-  if (savedForm.email) {
-    inputEl.value = savedForm.email;
-    formData.email = savedForm.email;
-  }
-
-  if (savedForm.message) {
-    textAreaEl.value = savedForm.message;
-    formData.message = savedForm.message;
+  if (savedForm) {
+    inputEl.value = savedForm.email || '';
+    formData.email = savedForm.email || '';
+    textAreaEl.value = savedForm.message || '';
+    formData.message = savedForm.message || '';
   }
 }
